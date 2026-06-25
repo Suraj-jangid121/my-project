@@ -6,9 +6,9 @@ def weather_data(city):
         response = requests.get(url)
         response.raise_for_status()
         data = response.json()
-        print(f" Temperature : {data['main']['temp']}C")
-        print(f" Feels Like  : {data['main']['feels_like']}C")
-        print(f" min temp : {data['main']['temp_min']}C")
+        print(f" Temperature : {data['main']['temp']} C")
+        print(f" Feels Like  : {data['main']['feels_like']} C")
+        print(f" min temp : {data['main']['temp_min']} C")
     except requests.exceptions.RequestException as e:
         print(e)
 
